@@ -1,0 +1,245 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+.outer-box {
+    background-color: black;
+    margin: auto;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.inner-box {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    display: inline-block;    
+    width: 40%;
+    border-radius: 3px;
+    margin-top: -55%;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 5px;
+    width: 40%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: right;
+    margin-right: 50px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.login-container input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: larger;
+}
+
+.login-container button {
+    width: 40%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.login-container button:hover {
+    background-color: darkgreen;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.shake {
+    animation: shake 0.5s;
+    border-color: red;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Second page */
+
+.choices-container {
+    background-color: white;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 5px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin: 20px 0;
+}
+
+.grid-item {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 2px solid green;
+    padding: 40px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.grid-item:hover {
+    background-color: green;
+    color: rgb(255, 255, 255);
+}
+
+
+/*third page*/ 
+
+form {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.label-input-group,
+.label-input-group-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.label-input-group-inline {
+    justify-content: space-between;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 10px; /* Space between label and input field */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right; /* Ensure text is aligned to the right */
+    margin-left: 10px; /* Space between input fields in inline groups */
+}
+
+.buttons-inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="button"] {
+    flex: 1;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px; /* Space between buttons */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between buttons as needed */
+    margin-top: 20px; /* Adjust the margin from the top as needed */
+}
+
+.button-group button {
+    padding: 10px 20px; /* Adjust padding for button size */
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: larger;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: darkgreen;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between buttons as needed */
+    margin-top: 20px; /* Adjust the margin from the top as needed */
+}
+
+.button-group button {
+    padding: 10px 20px; /* Adjust padding for button size */
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: larger;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: darkgreen;
+}

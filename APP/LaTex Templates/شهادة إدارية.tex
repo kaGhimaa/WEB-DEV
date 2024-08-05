@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+
+% Use XeLaTeX or LuaLaTeX for fontspec
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{bidi}
+\usepackage{geometry} % For margin adjustment
+\usepackage{fancyhdr} % For removing the page number
+
+% Set the main language
+\setmainlanguage{arabic}
+
+% Set the main font for Arabic text
+\setmainfont{Arial} % Replace with your desired font
+
+% Set the font for English numbers
+\newfontface\englishfont{Times New Roman} % Replace with your desired font for numbers
+
+% Define a command to switch to English font for numbers
+\newcommand{\englishnumbers}[1]{\textLR{\textbf{#1}}}
+
+% Set page geometry
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+\pagestyle{empty} % This removes the page number
+
+% Define variables
+\newcommand{\issuedate}{\englishnumbers{}} % Renamed to avoid conflict
+\newcommand{\wilaya}{تيارت}
+\newcommand{\daira}{تيارت}
+\newcommand{\baladia}{تيارت}
+\newcommand{\number}{\englishnumbers{}}
+\newcommand{\name}{}
+\newcommand{\birthdate}{\englishnumbers{}}
+\newcommand{\address}{}
+\newcommand{\cardnumber}{\englishnumbers{}}
+\newcommand{\cardstartdate}{\englishnumbers{}}
+\newcommand{\cardenddate}{\englishnumbers{}}
+\newcommand{\issueDate}{\englishnumbers{}}
+
+\begin{document}
+
+\begin{center}
+    \fontsize{20}{22}\selectfont \textbf{الجمهورية الجزائرية الديمقراطية الشعبية}\\
+    \vspace{0.3cm}
+    \fontsize{16}{18}\selectfont \textbf{وزارة الداخلية والجماعات المحلية و التهيئة العمرانية}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{flushright}
+    \fontsize{14}{16}\selectfont 
+    \textbf{ولاية: } \wilaya \hfill \textbf{في: } \issuedate \\
+    \vspace{0.3cm}
+    \textbf{المقاطعة الإدارية: } \daira \hspace{4cm} \\
+    \vspace{0.3cm}
+    \textbf{بلدية: } \baladia \hspace{4.5cm} \\
+    \vspace{0.3cm}
+    \textbf{الرقم: \number} \hspace{6cm} \\
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \fontsize{20}{22}\selectfont \textbf{شهادة إدارية}
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushright}
+    \fontsize{14}{16}\selectfont 
+    \RTL{
+    يشهد السيد رئيس المجلس الشعبي البلدي لبلدية \baladia \\
+    \vspace{0.3cm}
+    بأن المسمى (ة) : \name \\
+    \vspace{0.3cm}
+    المولود (ة) في : \birthdate \hspace{1.5cm} بلدية : \baladia \hspace{1.5cm} ولاية : \wilaya \\
+    \vspace{0.3cm}
+    الساكن ب :  \address \hspace{4cm} \\
+    \vspace{0.3cm}
+    قد تحصل(ت) على بطاقة التعريف الوطنية تحت رقم:  \cardnumber \\
+    \vspace{0.3cm}
+    صالحة من  : \cardstartdate \hspace{2cm}  إلى غاية : \cardenddate \\
+    }
+    \vspace{0.3cm}
+    و سلمت للمعني من طرف مصالحنا بتاريخ  : \issueDate \\
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \fontsize{14}{16}\selectfont  سلمت هذه الشهادة للمعني(ة) لإستعمالها في إطار ما يسمح به القانون 
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushleft}
+    \fontsize{16}{18}\selectfont \textbf{رئيس المصلحة}
+\end{flushleft}
+
+\end{document}

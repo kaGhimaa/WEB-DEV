@@ -1,0 +1,12 @@
+1_ Download "Mongodb" : link ==> "https://www.mongodb.com/try/download/community". : then open it and connect .
+ ( i saved a copy of mine / search "Restoring mongodb connection from the Dump folder" so that you can use it directly)
+
+2_ Open the  folder "creating_db" ==> you have "wilayas.csv / dairas.csv / baladias.csv" + app.py  inside it  , 
+open the shell and write "python app.py". ==> this will fill the database
+
+3_ You have the folder "LaTeX Templates" to work with .tex files ,  compiled using "xelatex" ==> open it in VS code and run it to see the pdf version .
+Link of how to use Latex in vs code ==> https://www.geekering.com/programming-languages/filipesalgueiro/how-to-write-latex-documents-using-visual-studio-code/
+
+4_ In the folder "Form" you find an example how it works to fill a form and print a pdf "chahada idaria" ==> IT TAKES ABOUT AN HOUR TO RUN IF YOU HAVE 4GO RAM 
+
+5_ The Main app is in the folder "Version 1" to run it  run the "app.py" 

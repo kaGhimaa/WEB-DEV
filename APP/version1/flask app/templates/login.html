@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">-->
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="outer-box">
+        
+    </div>
+    <div class="inner-box">
+        <h1>المصلحة البيومترية</h1>
+    </div>
+    <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <form id="login-form">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+        <div id="success-message" class="success-message"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

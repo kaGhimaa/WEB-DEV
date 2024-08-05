@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+
+% Use XeLaTeX or LuaLaTeX for fontspec
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{bidi}
+\usepackage{geometry} % For margin adjustment
+\usepackage{fancyhdr} % For removing the page number
+
+% Set the main language
+\setmainlanguage{arabic}
+
+% Set the main font for Arabic text
+\setmainfont{Arial} % Replace with your desired font
+
+% Set the font for English numbers
+\newfontface\englishfont{Times New Roman} % Replace with your desired font for numbers
+
+% Define a command to switch to English font for numbers
+\newcommand{\englishnumbers}[1]{\textLR{\textbf{#1}}}
+
+% Define a command for a dotted line
+\newcommand{\dottedline}{\leavevmode\leaders\hbox{$\cdot$}\hfill\kern0pt}
+
+% Set page geometry
+\geometry{top=1cm, bottom=2cm, left=2cm, right=2cm}
+
+\pagestyle{empty} % This removes the page number
+
+\begin{document}
+
+\begin{center}
+    \fontsize{20}{22}\selectfont \textbf{الجمهورية الجزائرية الديمقراطية الشعبية}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{flushright}
+    \fontsize{16}{18}\selectfont 
+    \textbf{ولاية: تيارت}  \\
+    \vspace{0.3cm}
+    \textbf{دائرة: تيارت} \\
+    \vspace{0.3cm}
+    \textbf{بلدية: تيارت} \\
+    \vspace{0.3cm}
+    \textbf{قسم التنظيم و التنشيط} \\
+    \vspace{0.3cm}
+    \textbf{مديرية التنظيم و الشؤون العامة} \\
+    \vspace{0.3cm}
+    \textbf{الرقم: \englishnumbers{5}} \\
+\end{flushright}
+
+\vspace{0.2cm}
+
+\begin{center}
+    \fontsize{40}{42}\selectfont \textbf{إستمارة تعهد}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{flushright}
+    \fontsize{16}{18}\selectfont 
+    أنا الممضي أسفله السيد(ة) : \dottedline \\
+    \vspace{1cm}
+    المولود(ة) بتاريخ : \dottedline \\
+    \vspace{1cm} 
+    الساكن(ة) ب : \dottedline \\
+\end{flushright}
+
+\vspace{1cm}
+
+\begin{flushright}
+    \hspace{1cm} % Adjust the space as needed
+    \fontsize{18}{20}\selectfont \textbf{أتعهد أني لا أملك بطاقة التعريف عبر التراب الوطني}
+    \hspace{1cm} % Adjust the space as needed
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \fontsize{18}{20}\selectfont \textbf{أمضي هذا التعهد في حدود ما يسمح به القانون}
+\end{center}
+
+\vspace{1.5cm}
+
+\noindent
+\fontsize{16}{18}\selectfont \textbf{مصادقة مصالح البلدية}
+\hfill
+\fontsize{16}{18}\selectfont \textbf{إمضاء المعني(ة)}
+
+\end{document}

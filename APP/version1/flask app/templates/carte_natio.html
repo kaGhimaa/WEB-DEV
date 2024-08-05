@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="outer-box"></div>
+    <div class="inner-box">
+        <h1>مكتب بطاقة التعريف الوطنية</h1>
+    </div>
+    
+    <form method="POST" action="/submit">
+        <!-- Section 1 -->
+        <section class="section">
+            <h2>المعلومات الإدارية</h2>
+            <div class="label-input-group">
+                <label for="wilaya">الولاية</label>
+                <select id="wilaya" name="wilaya" onchange="fetchDairas()">
+                    <option value="">اختر الولاية</option>
+                    {% for wilaya in wilayas %}
+                        <option value="{{ wilaya.Name_Wilaya }}">{{ wilaya.Name_Wilaya }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="label-input-group">
+                <label for="daira">الدائرة</label>
+                <select id="daira" name="daira" onchange="fetchBaladias()">
+                    <option value="">اختر الدائرة</option>
+                </select>
+            </div>
+            <div class="label-input-group">
+                <label for="baladia">البلدية</label>
+                <select id="baladia" name="baladia">
+                    <option value="">اختر البلدية</option>
+                </select>
+            </div>
+            <div class="label-input-group">
+                <label for="date1">تاريخ اليوم</label>
+                <input type="date" id="date1" name="date1">
+            </div>
+            <div class="label-input-group">
+                <label for="number1">الرقم</label>
+                <input type="number" id="number1" name="number1">
+            </div>
+        </section>
+        
+        <!-- Section 2 -->
+        <section class="section">
+            <h2>معلومات الشخص</h2>
+            <div class="label-input-group">
+                <label for="text4">الاسم الكامل</label>
+                <input type="text" id="text4" name="text4">
+            </div>
+            <div class="label-input-group-inline">
+                <label for="date2">تاريخ الازدياد</label>
+                <input type="date" id="date2" name="date2">
+                <label for="text5">بلدية</label>
+                <input type="text" id="text5" name="text5">
+                <label for="text6">ولاية</label>
+                <input type="text" id="text6" name="text6">
+            </div>
+            <div class="label-input-group">
+                <label for="text7">مكان الاقامة</label>
+                <input type="text" id="text7" name="text7">
+            </div>
+            <div class="label-input-group">
+                <label for="number2">رقم بطاقة التعريف</label>
+                <input type="number" id="number2" name="number2">
+            </div>
+            <div class="label-input-group-inline">
+                <label for="date3">صالحة من</label>
+                <input type="date" id="date3" name="date3">
+                <label for="date4">الى</label>
+                <input type="date" id="date4" name="date4">
+            </div>
+            <div class="label-input-group">
+                <label for="date5">تاريخ تسليم البطاقة من طرف المصلحة</label>
+                <input type="date" id="date5" name="date5">
+            </div>
+        </section>
+        
+        <!-- Section 3 -->
+        <section class="section">
+            <h2>خاص بشهادة إثبات المعلومات</h2>
+            <div class="label-input-group">
+                <label for="father-name">إسم الأب</label>
+                <input type="text" id="father-name" name="father-name">
+            </div>
+            <div class="label-input-group">
+                <label for="mother-full-name">الإسم الكامل للأم</label>
+                <input type="text" id="mother-full-name" name="mother-full-name">
+            </div>
+        </section>
+        
+        <!-- Section 4 -->
+        <section class="section">
+            <div class="button-group">
+                <button type="submit" name="print-admin-cert">طبع شهادة إدارية</button>
+                <button type="submit" name="print-info-cert">طبع شهادة إثبات المعلومات</button>
+            </div>
+        </section>
+        
+        <!-- Back Button -->
+        <section class="section">
+            <div class="button-group">
+                <button type="button" onclick="location.href='/second_page'">العودة إلى الصفحة الرئيسية</button>
+            </div>
+        </section>
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

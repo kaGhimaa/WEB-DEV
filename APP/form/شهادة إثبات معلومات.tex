@@ -1,0 +1,113 @@
+\documentclass[a4paper,12pt]{article}
+
+% Use XeLaTeX or LuaLaTeX for fontspec
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{bidi}
+\usepackage{geometry} % For margin adjustment
+\usepackage{fancyhdr} % For removing the page number
+
+% Set the main language
+\setmainlanguage{arabic}
+
+% Set the main font for Arabic text
+\setmainfont{Arial} % Replace with your desired font
+
+% Set the font for English numbers
+\newfontface\englishfont{Times New Roman} % Replace with your desired font for numbers
+
+% Define a command to switch to English font for numbers
+\newcommand{\englishnumbers}[1]{\textLR{\textbf{#1}}}
+
+% Set page geometry
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+\pagestyle{empty} % This removes the page number
+
+% Define variables
+\newcommand{\issuedate}{\englishnumbers{2024/06/23}} % Renamed to avoid conflict
+\newcommand{\wilaya}{تيارت}
+\newcommand{\daira}{تيارت}
+\newcommand{\baladia}{تيارت}
+\newcommand{\numbers}{\englishnumbers{}}
+\newcommand{\name}{}
+\newcommand{\birthdate}{\englishnumbers{}}
+\newcommand{\address}{}
+\newcommand{\cardnumber}{\englishnumbers{}}
+\newcommand{\cardissuedate}{\englishnumbers{}}
+\newcommand{\fathername}{}
+\newcommand{\mothername}{}
+
+\begin{document}
+
+\begin{center}
+    \fontsize{20}{22}\selectfont \textbf{الجمهورية الجزائرية الديمقراطية الشعبية}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{flushright}
+    \fontsize{14}{16}\selectfont 
+    \textbf{ولاية: \wilaya} \hfill  في : \issuedate \\
+    \vspace{0.3cm}
+    \textbf{دائرة: \daira} \\
+    \vspace{0.3cm}
+    \textbf{بلدية: \baladia} \\
+    \vspace{0.3cm}
+    \textbf{قسم التنظيم و التنشيط} \\
+    \vspace{0.3cm}
+    \textbf{مديرية التنظيم و الشؤون العامة} \\
+    \vspace{0.3cm}
+    \textbf{مصلحة التنظيم العام} \\
+    \vspace{0.3cm}
+    \textbf{المصلحة البيومترية} \\
+    \vspace{0.3cm}
+    \textbf{الرقم: \numbers} \\
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \fontsize{20}{22}\selectfont \textbf{شهادة إثبات المعلومات بطاقة التعريف البيومترية}
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushright}
+    \fontsize{14}{16}\selectfont 
+    \RTL{
+    يشهد السيد رئيس المجلس الشعبي البلدي لبلدية \baladia \\
+    \vspace{0.3cm}
+    بأن المسمى (ة) : \name \\
+    \vspace{0.3cm}
+    المولود (ة) في : \birthdate \hspace{2cm} بلدية : \baladia \hspace{2cm} ولاية : \wilaya \\
+    \vspace{0.3cm}
+    إبن(ة) : \fathername \hspace{3cm} و: \mothername \\
+    \vspace{0.3cm}
+    الساكن ب :  \address \hspace{4cm} \\
+    \vspace{0.3cm}
+    الحاصل (ة) على بطاقة التعريف البيومترية رقم :  \cardnumber \\
+    \vspace{0.3cm}
+    الصادرة بتاريخ : \cardissuedate \hspace{2cm} عن بلدية:  \baladia \\
+    }
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \fontsize{14}{16}\selectfont سلمت للمعني للإدلاء بها في ما يسمح به القانون
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{flushright}
+    \fontsize{14}{16}\selectfont \textbf{ملاحظة:} هذه الوثيقة صالحة فقط لإستخراج تصريح بالضياع
+\end{flushright}
+
+\vspace{0.3cm}
+
+\begin{flushleft}
+    \fontsize{16}{18}\selectfont \textbf{رئيس المصلحة}
+\end{flushleft}
+
+\end{document}
